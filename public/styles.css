@@ -1,15 +1,31 @@
+*{
+  user-select: none;
+}
+
 .container{
-  position: relative;
-  width: 400px;
-  height: 400px;
+  position: absolute;
+  width: 80%;
+  height: 65%;
   border: cornflowerblue solid 2px;
+  left: 10%;
+
+}
+
+.oldComments{
+  position: absolute;
+  width: 80%;
+  height: 30%;
+  border: cornflowerblue solid 2px;
+  bottom: 2%;
+  left: 10%;
+
 }
 
 
 .img-container{
   position: relative;
   width: 70%;
-  height: 70%;
+  height: 60%;
   left: 15%;
   top: 5%;
   border: cornflowerblue solid 2px;
@@ -37,11 +53,20 @@
 
 .likeBtn{
   bottom: 2%;
-  left: 20%;
+  left: 15%;
 }
 .nopeBtn{
   bottom: 2%;
-  right: 20%;
+  right: 15%;
+}
+.commentBtn{
+  bottom: 2%;
+  right: 39%;
+}
+
+.newCatBtn{
+  bottom: 22%;
+  right: 40%;
 }
 
 .voteBar{
@@ -58,7 +83,7 @@
 .voteBar::before {
   content: "";
   background-color: rgb(37, 129, 25); 
-  width: 50%;
+  width: var(--widthYes);
   height: 100%;
   position: absolute;
   left: 0;
@@ -68,13 +93,64 @@
 .voteBar::after {
   content: "";
   background-color: rgb(114, 14, 14); 
-  width: var(--width);
+  width: var(--widthNo);
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
 }
 
+.commentSection{
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  /* visibility: hidden; */
+}
+
+.commentText{
+  width: 50%;
+  height: 95%;
+  bottom: 0;
+}
+
+.commentSubmit{
+  bottom: 50%;
+  left: 65%;
+  height: 15%;
+
+}
+
+.commentClose{
+  bottom: 30%;
+  left: 65%;
+  height: 15%;
+
+}
 
 
+.hidden{
+  visibility: hidden;
+}
 
+.newComment{
+  position: relative;
+  width: 100%;
+  height: 20%;
+  border: solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentDiv{
+  width: 45%;
+  border: solid rgb(72, 16, 16);
+  right: 0%;
+}
+.dateDiv{
+  width: 45%;
+  border: solid rgb(72, 195, 89);
+  left: 0%;
+}
